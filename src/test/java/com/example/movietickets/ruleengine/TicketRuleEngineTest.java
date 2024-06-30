@@ -1,8 +1,8 @@
 package com.example.movietickets.ruleengine;
 
-import com.example.movietickets.domain.Customer;
-import com.example.movietickets.domain.TicketCost;
-import com.example.movietickets.domain.TicketType;
+import com.example.movietickets.model.Customer;
+import com.example.movietickets.model.TicketCost;
+import com.example.movietickets.model.TicketType;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

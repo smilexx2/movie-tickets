@@ -1,9 +1,6 @@
-package com.example.movietickets;
+package com.example.movietickets.service;
 
-import com.example.movietickets.domain.Customer;
-import com.example.movietickets.domain.Ticket;
-import com.example.movietickets.domain.TicketCost;
-import com.example.movietickets.domain.TicketType;
+import com.example.movietickets.model.*;
 import com.example.movietickets.ruleengine.TicketRuleEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

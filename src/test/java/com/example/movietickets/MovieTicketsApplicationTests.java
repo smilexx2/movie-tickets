@@ -1,6 +1,7 @@
 package com.example.movietickets;
 
-import com.example.movietickets.domain.Ticket;
+import com.example.movietickets.model.Ticket;
+import com.example.movietickets.model.TransactionResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

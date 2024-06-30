@@ -1,5 +1,8 @@
-package com.example.movietickets;
+package com.example.movietickets.controller;
 
+import com.example.movietickets.model.TransactionRequest;
+import com.example.movietickets.model.TransactionResponse;
+import com.example.movietickets.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,7 +1,7 @@
 package com.example.movietickets.ruleengine.rules;
 
-import com.example.movietickets.domain.TicketType;
-import com.example.movietickets.domain.Customer;
+import com.example.movietickets.model.TicketType;
+import com.example.movietickets.model.Customer;
 
 public interface Rule {
     boolean matches(Customer customer);

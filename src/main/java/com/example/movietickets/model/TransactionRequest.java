@@ -1,6 +1,4 @@
-package com.example.movietickets;
-
-import com.example.movietickets.domain.Customer;
+package com.example.movietickets.model;
 
 import java.util.List;
 

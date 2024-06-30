@@ -1,8 +1,8 @@
 package com.example.movietickets.ruleengine;
 
-import com.example.movietickets.domain.TicketCost;
-import com.example.movietickets.domain.TicketType;
-import com.example.movietickets.domain.Customer;
+import com.example.movietickets.model.TicketCost;
+import com.example.movietickets.model.TicketType;
+import com.example.movietickets.model.Customer;
 import com.example.movietickets.ruleengine.conditions.AgeCondition;
 import com.example.movietickets.ruleengine.discounts.BulkDiscount;
 import com.example.movietickets.ruleengine.discounts.NoDiscount;

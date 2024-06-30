@@ -1,4 +1,4 @@
-package com.example.movietickets.domain;
+package com.example.movietickets.model;
 
 import java.util.Objects;
 
