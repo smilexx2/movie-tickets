@@ -3,6 +3,7 @@ package com.example.movietickets;
 import com.example.movietickets.domain.Ticket;
 
 import java.util.List;
+import java.util.Objects;
 
 public class TransactionResponse {
     private int transactionId;
@@ -41,6 +42,21 @@ public class TransactionResponse {
                 ", tickets=" + tickets +
                 ", totalCost=" + totalCost +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TransactionResponse that = (TransactionResponse) o;
+        return transactionId == that.transactionId &&
+                Double.compare(that.totalCost, totalCost) == 0 &&
+                Objects.equals(tickets, that.tickets);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(transactionId, tickets, totalCost);
     }
 }
 
