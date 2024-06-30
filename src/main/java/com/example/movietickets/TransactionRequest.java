@@ -1,5 +1,7 @@
 package com.example.movietickets;
 
+import com.example.movietickets.domain.Customer;
+
 import java.util.List;
 
 public class TransactionRequest {
@@ -21,37 +23,6 @@ public class TransactionRequest {
 
     public void setCustomers(List<Customer> customers) {
         this.customers = customers;
-    }
-
-    // Customer inner class
-    public static class Customer {
-        private String name;
-        private int age;
-
-        // Getters and Setters
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        @Override
-        public String toString() {
-            return "Customer{" +
-                    "name='" + name + '\'' +
-                    ", age=" + age +
-                    '}';
-        }
     }
 
     @Override
