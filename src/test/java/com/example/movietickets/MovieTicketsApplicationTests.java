@@ -1,12 +1,12 @@
 package com.example.movietickets;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.*;
+
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,7 +17,7 @@ class MovieTicketsApplicationTests {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void projectCostShouldReturnTheTransactionId() throws JSONException {
+    public void projectCostShouldReturnTheTransactionId() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         String body = """
@@ -39,10 +39,8 @@ class MovieTicketsApplicationTests {
                     ]
                 }
                 """;
-        ResponseEntity<String> response = restTemplate.postForEntity("/api/transactions/project-cost", new HttpEntity<>(body, headers), String.class);
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        JSONObject jsonResponse = new JSONObject(response.getBody());
-        assertEquals("1", jsonResponse.getString("transactionId"));
+        ResponseEntity<TransactionResponse> response = restTemplate.postForEntity("/api/transactions/project-cost", new HttpEntity<>(body, headers), TransactionResponse.class);
+        assertEquals(1, Objects.requireNonNull(response.getBody()).getTransactionId());
     }
 
 }
