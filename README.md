@@ -17,7 +17,7 @@ This is a Spring Boot application that processes movie ticket transactions. The 
 
 ## API Endpoints
 
-### Process Transaction
+### Project Transaction Cost
 **URL:** `/api/transactions/project-cost`
 
 **Method:** `POST`
